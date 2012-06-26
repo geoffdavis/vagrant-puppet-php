@@ -6,6 +6,8 @@ Vagrant::Config.run do |config|
     vm.memory_size =768
   end
 
+  config.vm.forward_port 80, 8080, :auto => true
+
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "manifests"
     puppet.module_path = "modules"

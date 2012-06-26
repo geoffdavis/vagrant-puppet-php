@@ -10,3 +10,6 @@
 [submodule "modules/concat"]
 	path = modules/concat
 	url = https://github.com/ripienaar/puppet-concat.git
+[submodule "modules/antelope"]
+	path = modules/antelope
+	url = git://github.com/UCSD-ANF/puppet-antelope.git

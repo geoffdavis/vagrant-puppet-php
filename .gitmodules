@@ -1,0 +1,6 @@
+[submodule "modules/php"]
+	path = modules/php
+	url = https://github.com/UCSD-ANF/puppet-php.git
+[submodule "modules/stdlib"]
+	path = modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git

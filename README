@@ -1,0 +1,5 @@
+This is a vagrant repository for testing the ANF PHP/Apache/Antelope stack
+
+Because we don't really have a way to test Antelope inside of a vagrant
+VM (licensing issues mostly), this just goes through the motions of
+setting things up.

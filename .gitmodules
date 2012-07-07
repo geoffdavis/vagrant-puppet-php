@@ -13,3 +13,6 @@
 [submodule "modules/antelope"]
 	path = modules/antelope
 	url = git://github.com/UCSD-ANF/puppet-antelope.git
+[submodule "modules/logrotate"]
+	path = modules/logrotate
+	url = https://github.com/UCSD-ANF/puppet-logrotate.git

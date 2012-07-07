@@ -1,5 +1,10 @@
 import 'osfamily.pp'
 
+package { pkgutil:
+  ensure   => latest,
+  provider => 'pkgutil',
+}
+
 file { '/usr/local':
   ensure => directory,
   owner  => 'root',
@@ -16,11 +21,13 @@ file { ['/usr/local/bin','/usr/local/sbin'] :
   before  => Class['apache'],
 }
 
+include 'logrotate'
 include 'php'
 include 'apache'
 include 'php::apache'
 include 'php::devel'
 
+Class['logrotate'] -> Class['apache']
 class { 'antelope::php':
   version => '5.2-64',
 }

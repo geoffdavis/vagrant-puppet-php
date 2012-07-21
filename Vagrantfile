@@ -3,14 +3,14 @@ Vagrant::Config.run do |config|
   # Define solaris vagrant vm
   config.vm.define :solaris do |solaris_config|
     solaris_config.vm.box = 'solaris-10u10'
-    solaris_config.vm.system = :solaris
+    solaris_config.vm.guest = :solaris
 #  config.vm.box_url = 'http://puppetlabs.s3.amazonaws.com/pub/solaris10_64.box'
 
     solaris_config.vm.customize do |vm|
       vm.memory_size = 768
     end
 
-    solaris_config.vm.forward_port "http", 80, 18080
+    solaris_config.vm.forward_port 80, 18080
 
     solaris_config.vm.provision :puppet do |puppet|
       puppet.manifests_path = "manifests"
@@ -34,7 +34,7 @@ Vagrant::Config.run do |config|
       vm.memory_size = 768
     end
 
-    linux_config.vm.forward_port "http", 80, 19080
+    linux_config.vm.forward_port 80, 19080
 
     linux_config.vm.provision :puppet do |puppet|
       puppet.manifests_path = "manifests"

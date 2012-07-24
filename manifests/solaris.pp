@@ -26,6 +26,7 @@ include 'php'
 include 'apache'
 include 'php::apache'
 include 'php::devel'
+include 'perl::apache'
 
 Class['logrotate'] -> Class['apache']
 class { 'antelope::php':

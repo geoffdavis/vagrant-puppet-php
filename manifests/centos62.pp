@@ -7,6 +7,7 @@ if $::kernel == 'Linux' and $::lsbmajdistrelease {
   include 'apache'
   include 'php::apache'
   include 'php::devel'
+  include 'perl::apache'
 
   class { 'antelope::php':
     version => '5.2-64',

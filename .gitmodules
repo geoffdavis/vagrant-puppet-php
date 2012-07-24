@@ -16,3 +16,6 @@
 [submodule "modules/logrotate"]
 	path = modules/logrotate
 	url = https://github.com/UCSD-ANF/puppet-logrotate.git
+[submodule "modules/perl"]
+	path = modules/perl
+	url = https://github.com/UCSD-ANF/puppet-perl.git
